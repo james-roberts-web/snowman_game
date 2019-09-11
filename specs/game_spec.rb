@@ -1,0 +1,5 @@
+require('minitest/autorun')
+require('minitest/rg')
+require_relative('../hiddenword')
+require_relative('../player')
+require_relative('../game')
