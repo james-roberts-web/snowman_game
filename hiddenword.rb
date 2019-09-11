@@ -18,7 +18,7 @@ class HiddenWord
       if !guessed_letters.include?(word_letter)
           display += "*"
       end
-  end
+    end
     return display
   end
 

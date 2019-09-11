@@ -21,6 +21,27 @@ class Game
     return game_lost
   end
 
+  # def game_won
+  #   if @guessed_letters.include?(@hiddenword.split(//))
+  #     return true
+  #   end
+  #   return false
+  # end
 
+
+  def game_won
+    winning_counter = 0
+    for word_letter in @hiddenword.split(//)
+      for guess_letter in @guessed_letters
+        if guess_letter == word_letter
+          winning_counter += 1
+        end
+      end
+    end
+    if winning_counter == @hiddenword.split(//).count
+      return true
+    end
+    return false
+  end
 
 end

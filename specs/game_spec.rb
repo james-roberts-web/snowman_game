@@ -31,6 +31,7 @@ class TestGame < MiniTest::Test
     @game_initialize.guess("z")
     @game_initialize.guess("f")
     assert_equal(false, @game_initialize.game_lost)
+    assert_equal(false, @game_initialize.game_won)
   end
 
   def test_end_conditions__lost
@@ -48,7 +49,7 @@ class TestGame < MiniTest::Test
     @game_initialize.guess("n")
     @game_initialize.guess("w")
     @game_initialize.guess("o")
-    assert_equal(true, @game_initialize.won)
+    assert_equal(true, @game_initialize.game_won)
   end
 
 end
