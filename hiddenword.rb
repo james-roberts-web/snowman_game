@@ -6,6 +6,7 @@ class HiddenWord
   end
 
   def display
+    
   end
 
 end
