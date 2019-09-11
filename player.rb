@@ -7,8 +7,4 @@ class Player
     @lives = lives
   end
 
-  def guess
-  end
-
-
 end

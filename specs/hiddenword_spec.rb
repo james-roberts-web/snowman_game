@@ -10,12 +10,18 @@ class TestHiddenWord < MiniTest::Test
   def setup()
     @word1 = HiddenWord.new("snow")
     @game_initialize = Game.new("Joe", "snow", [])
-  
-
+    @game_correct_guess = Game.new("Joe", "snow", ["n"])
+    @game_incorrect_guess = Game.new("Joe", "snow", ["e"])
+    @player = Player.new("Joe")
   end
 
   def test_initial_display
-    assert_equal("****", @word1.display)
+    assert_equal("****", @word1.display(@game_initialize.guessed_letters))
+  end
+
+  def test_later_display
+    @game_initialize.guessed_letters = ["n"]
+    assert_equal("*n**", @word1.display(@game_correct_guess.guessed_letters))
   end
 
 end

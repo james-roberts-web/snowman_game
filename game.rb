@@ -4,8 +4,12 @@ class Game
 
   def initialize(player, hiddenword, guessed_letters=[])
     @player = player
-    @hiddenword = hiddenWord
+    @hiddenword = hiddenword
     @guessed_letters = guessed_letters
+  end
+
+  def guess(letter)
+    @guessed_letters.push(letter)
   end
 
 end
