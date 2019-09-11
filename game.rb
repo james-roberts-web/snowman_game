@@ -21,13 +21,6 @@ class Game
     return game_lost
   end
 
-  # def game_won
-  #   if @guessed_letters.include?(@hiddenword.split(//))
-  #     return true
-  #   end
-  #   return false
-  # end
-
 
   def game_won
     winning_counter = 0
