@@ -9,10 +9,10 @@ class TestHiddenWord < MiniTest::Test
 
   def setup()
     @word1 = HiddenWord.new("snow")
-    @game_initialize = Game.new("Joe", "snow", [])
-    @game_correct_guess = Game.new("Joe", "snow", ["n"])
-    @game_incorrect_guess = Game.new("Joe", "snow", ["e"])
-    @player = Player.new("Joe")
+    @player1 = Player.new("Joe")
+    @game_initialize = Game.new(@player1, "snow", [])
+    @game_correct_guess = Game.new(@player1, "snow", ["n"])
+    @game_incorrect_guess = Game.new(@player1, "snow", ["e"])
   end
 
   def test_initial_display
